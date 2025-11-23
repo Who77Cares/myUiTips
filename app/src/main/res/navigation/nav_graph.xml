@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/containerFragment">
+
+    <fragment
+        android:id="@+id/containerFragment"
+        android:name="com.example.materialviewsdemo.ContainerFragment"
+        android:label="ContainerFragment" >
+        <action
+            android:id="@+id/action_containerFragment_to_caruselFragment"
+            app:destination="@id/caruselFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caruselFragment"
+        android:name="com.example.materialviewsdemo.carusel.CaruselFragment"
+        android:label="CaruselFragment" />
+</navigation>

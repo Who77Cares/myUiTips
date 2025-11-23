@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">materialViewsDemo</string>
+
+    <string name="img_des_1">img_des_1</string>
+    <string name="img_des_2">img_des_2</string>
+    <string name="img_des_3">img_des_3</string>
+    <string name="img_des_4">img_des_4</string>
+    <string name="img_des_5">img_des_5</string>
+    <string name="img_des_6">img_des_6</string>
+    <string name="img_des_7">img_des_7</string>
+
+</resources>
