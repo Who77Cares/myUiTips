@@ -9,7 +9,7 @@ import com.example.materialviewsdemo.R
 
 
 class CaruselAdapter(
-    private val onItemClick: (CaruselItem) -> Unit
+    private val onItemClick: (Int, CaruselItem) -> Unit
 ) : RecyclerView.Adapter<CaruselAdapter.CaruselViewHolder>() {
 
     private val items = mutableListOf<CaruselItem>()
@@ -38,7 +38,7 @@ class CaruselAdapter(
         holder.bind(items[position])
 
         holder.itemView.setOnClickListener {
-            onItemClick(items[position])
+            onItemClick(position, items[position])
         }
     }
 
