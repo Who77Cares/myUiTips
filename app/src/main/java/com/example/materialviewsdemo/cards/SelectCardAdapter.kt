@@ -8,17 +8,19 @@ import android.widget.TextView
 import androidx.recyclerview.selection.ItemDetailsLookup
 import androidx.recyclerview.selection.ItemKeyProvider
 import androidx.recyclerview.selection.SelectionTracker
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.materialviewsdemo.R
 import com.google.android.material.card.MaterialCardView
 import kotlinx.coroutines.channels.ReceiveChannel
+import java.util.Collections
 
 class SelectCardAdapter(
     private val onItemClick: (Int) -> Unit
 ): RecyclerView.Adapter<SelectCardAdapter.SelectCardViewHolder>()
 
  {
-     private val items = mutableListOf<String>()
+     val items = mutableListOf<String>()
 
 
      // Следит за тем, какие карточки выбраны, запоминает их и сообщает когда выбор меняется.
@@ -99,6 +101,7 @@ class SelectCardAdapter(
          override fun getKey(position: Int): Long? = position.toLong()
          override fun getPosition(key: Long?): Int = key?.toInt() ?: -1
      }
+
 
 }
 

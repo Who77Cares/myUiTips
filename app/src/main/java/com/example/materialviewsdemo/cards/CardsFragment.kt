@@ -9,8 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.selection.SelectionPredicates
 import androidx.recyclerview.selection.SelectionTracker
 import androidx.recyclerview.selection.StorageStrategy
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.materialviewsdemo.databinding.FragmentCardsBinding
+import java.util.Collections
 
 
 class CardsFragment: Fragment() {
@@ -48,6 +51,9 @@ class CardsFragment: Fragment() {
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
             recyclerView.setHasFixedSize(true)
             recyclerView.adapter = adapter
+
+            // ВСЁ! Добавляем перетаскивание ↓
+            ItemTouchHelper(SimpleItemTouchCallback()).attachToRecyclerView(recyclerView)
         }
 
         setupSelectionTracker()
@@ -92,6 +98,34 @@ class CardsFragment: Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     } } } )
+    }
+
+    // Callback для перетаскивания
+    inner class SimpleItemTouchCallback : ItemTouchHelper.SimpleCallback(
+        ItemTouchHelper.UP or ItemTouchHelper.DOWN, // разрешаем двигать вверх/вниз
+         ItemTouchHelper.RIGHT // ← ВКЛЮЧАЕМ свайпы влево-вправо
+    ) {
+        override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
+            // Меняем элементы местами в списке
+            val fromPos = viewHolder.bindingAdapterPosition
+            val toPos = target.bindingAdapterPosition
+            Collections.swap((recyclerView.adapter as SelectCardAdapter).items, fromPos, toPos)
+            recyclerView.adapter?.notifyItemMoved(fromPos, toPos)
+            return true
+        }
+
+        override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+            // Получаем recyclerView из viewHolder
+            val recyclerView = viewHolder.itemView.parent as RecyclerView
+            val adapter = recyclerView.adapter as SelectCardAdapter
+            val position = viewHolder.bindingAdapterPosition
+
+            // Удаляем элемент при свайпе
+            adapter.items.removeAt(position)
+            adapter.notifyItemRemoved(position)
+
+            Toast.makeText(viewHolder.itemView.context, "Удалено", Toast.LENGTH_SHORT).show()
+        }
     }
 
 }
