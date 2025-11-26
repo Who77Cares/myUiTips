@@ -32,6 +32,12 @@ class ContainerFragment: Fragment() {
             )
         }
 
+      binding.goToCardsButton.setOnClickListener {
+          findNavController().navigate(
+              R.id.action_containerFragment_to_cardsFragment
+          )
+      }
+
 
     }
 

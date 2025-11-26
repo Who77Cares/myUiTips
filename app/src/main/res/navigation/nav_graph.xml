@@ -11,9 +11,16 @@
         <action
             android:id="@+id/action_containerFragment_to_caruselFragment"
             app:destination="@id/caruselFragment" />
+        <action
+            android:id="@+id/action_containerFragment_to_cardsFragment"
+            app:destination="@id/cardsFragment" />
     </fragment>
     <fragment
         android:id="@+id/caruselFragment"
         android:name="com.example.materialviewsdemo.carusel.CaruselFragment"
         android:label="CaruselFragment" />
+    <fragment
+        android:id="@+id/cardsFragment"
+        android:name="com.example.materialviewsdemo.cards.CardsFragment"
+        android:label="CardsFragment" />
 </navigation>
