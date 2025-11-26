@@ -23,6 +23,8 @@ class CardsFragment: Fragment() {
 
     private lateinit var adapter: SelectCardAdapter
 
+    private var isCardSelected = false
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -81,7 +83,41 @@ class CardsFragment: Fragment() {
             adapter.KeyProvider(),
             adapter.DetailsLookup(binding.recyclerView),
             StorageStrategy.createLongStorage()
-        ).withSelectionPredicate(SelectionPredicates.createSelectAnything())
+        ).withSelectionPredicate(object : SelectionTracker.SelectionPredicate<Long?>() {
+
+            // позиции могут меняться, а ключи постоянны
+            override fun canSetStateForKey(
+                key: Long?,
+                nextState: Boolean
+            ): Boolean {
+
+                val position = key?.toInt()
+                if (position != null) {
+                    if (position < 3) return false
+                } // первые 3 нельзя
+
+                // Используем внешний флаг вместо selectionTracker
+                if (isCardSelected) return false
+
+                return true
+
+            }
+
+            override fun canSetStateAtPosition(
+                position: Int,
+                nextState: Boolean
+            ): Boolean {
+                if (position < 3) return false // первые 3 нельзя
+
+                // Используем внешний флаг вместо selectionTracker
+                if (isCardSelected) return false
+
+                return true
+            }
+
+            override fun canSelectMultiple(): Boolean = false
+
+        })
             .build()
 
         adapter.selectionTracker = selectionTracker
@@ -90,6 +126,9 @@ class CardsFragment: Fragment() {
         selectionTracker.addObserver(
             object : SelectionTracker.SelectionObserver<Long?>() {
                 override fun onSelectionChanged() {
+
+                    isCardSelected = selectionTracker.hasSelection() // ← обновляем флаг
+
                     val selectedCount = selectionTracker.selection.size()
                     if (selectedCount > 0) {
                         Toast.makeText(
