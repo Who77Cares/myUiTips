@@ -38,6 +38,12 @@ class ContainerFragment: Fragment() {
           )
       }
 
+        binding.goToSliderButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_containerFragment_to_sliderFragment
+            )
+        }
+
 
     }
 
