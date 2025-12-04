@@ -13,4 +13,25 @@
         android:clipToPadding="false"
         />
 
+    <TextView
+        android:id="@+id/firstTextView"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="null" />
+
+    <TextView
+        android:id="@+id/secondTextView"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="null" />
+
+    <TextView
+        android:id="@+id/thirdTextView"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="null" />
+
 </LinearLayout>
