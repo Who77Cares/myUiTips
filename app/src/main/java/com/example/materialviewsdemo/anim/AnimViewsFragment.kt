@@ -1,12 +1,16 @@
 package com.example.materialviewsdemo.anim
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import androidx.core.os.HandlerCompat.postDelayed
 import androidx.fragment.app.Fragment
+import androidx.transition.Visibility
 import com.example.materialviewsdemo.R
 import com.example.materialviewsdemo.databinding.FragmentAnimationsBinding
 
@@ -35,9 +39,25 @@ class AnimViewsFragment: Fragment() {
         binding.image1.animation = AnimationUtils.loadAnimation(context, R.anim.fade_in)
         binding.image1.animate()
 
-        binding.image3.postDelayed({
+        binding.image2.postDelayed({
             startPulseAnimation()
         }, 4000)
+
+        binding.image3.animation = AnimationUtils.loadAnimation(context, R.anim.slide_in_from_left)
+        binding.image3.animate()
+
+        // Через некоторое время или по событию - анимация "выхода" (справа налево)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            binding.image3.animation = AnimationUtils.loadAnimation(context, R.anim.slide_out_to_left)
+            binding.image3.animate()
+            binding.image3.visibility = View.INVISIBLE
+        }, 4000)
+
+
+
+
+
     }
 
     private fun startPulseAnimation() {
