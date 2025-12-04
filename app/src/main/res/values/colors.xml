@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+    <!-- 🍭 Яркие / насыщенные -->
+    <color name="teal_700">#FFD32F2F</color>       <!-- Ярко-красный -->
+    <color name="green_500">#FFFF6D00</color>    <!-- Апельсиновый -->
+
+    <!-- 🪻 Холодные / спокойные -->
+    <color name="gray_400">#FF448AFF</color>        <!-- Лазурный -->
+    <color name="blue_500">#FF9575CD</color>      <!-- Лавандовый -->
+
 </resources>
