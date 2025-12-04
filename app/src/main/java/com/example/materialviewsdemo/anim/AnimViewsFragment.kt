@@ -55,6 +55,26 @@ class AnimViewsFragment: Fragment() {
         }, 4000)
 
 
+        binding.image4.animation = AnimationUtils.loadAnimation(context, R.anim.rotate_360)
+        binding.image4.animate()
+
+
+        // огика кривая но работает (скейлы - маштабы
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            binding.image5.animation = AnimationUtils.loadAnimation(context, R.anim.scale_up)
+            binding.image5.animate()
+        }, 2000)
+
+
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            binding.image5.animation = AnimationUtils.loadAnimation(context, R.anim.scale_in)
+            binding.image5.animate()
+        }, 6000)
+
+
+        ///
 
 
 

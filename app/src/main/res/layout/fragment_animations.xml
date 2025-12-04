@@ -20,7 +20,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 1"
             android:scaleType="centerCrop"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_3" />
 
         <!-- Картинка 2 -->
         <ImageView
@@ -31,7 +31,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 2"
             android:scaleType="fitCenter"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_2" />
 
         <!-- Картинка 3 -->
         <ImageView
@@ -41,7 +41,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 3"
             android:scaleType="centerCrop"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_4" />
 
         <!-- Картинка 4 -->
         <ImageView
@@ -52,7 +52,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 4"
             android:scaleType="centerInside"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_1" />
 
         <!-- Картинка 5 -->
         <ImageView
@@ -62,7 +62,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 5"
             android:scaleType="fitXY"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_5" />
 
         <!-- Картинка 6 -->
         <ImageView
@@ -73,7 +73,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 6"
             android:scaleType="centerCrop"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_3" />
 
         <!-- Картинка 7 -->
         <ImageView
@@ -83,7 +83,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 7"
             android:scaleType="centerCrop"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_2" />
 
         <!-- Картинка 8 -->
         <ImageView
@@ -94,7 +94,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 8"
             android:scaleType="centerInside"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_3" />
 
         <!-- Картинка 9 -->
         <ImageView
@@ -115,7 +115,7 @@
             android:layout_marginBottom="20dp"
             android:contentDescription="Image 10"
             android:scaleType="centerCrop"
-            android:src="@drawable/carusel_6" />
+            android:src="@drawable/carusel_3" />
 
         <!-- Добавим кнопки для управления -->
         <LinearLayout
