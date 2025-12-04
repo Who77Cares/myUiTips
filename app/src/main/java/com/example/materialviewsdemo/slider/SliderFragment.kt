@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.materialviewsdemo.databinding.FragmentSliderBinding
 
@@ -31,7 +32,16 @@ class SliderFragment: Fragment() {
 //        // Устанавливаем начальное значение
 //        slider.value = 9f
 
+        slider.addOnChangeListener { _, value, fromUser ->
+            if (fromUser) {
+                binding.valueText.text = "Значение: ${value.toInt()}"
 
+                // Проверяем здесь, когда меняется слайдер
+                if (value.toInt() == 1520) {
+                    Toast.makeText(requireContext(), "Достигнуто значение 1520!", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
 
         // Добавляем слушатель для переключателя
         switchButton.setOnCheckedChangeListener { _, isChecked ->

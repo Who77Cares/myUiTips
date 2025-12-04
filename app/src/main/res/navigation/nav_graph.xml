@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_containerFragment_to_sliderFragment"
             app:destination="@id/sliderFragment" />
+        <action
+            android:id="@+id/action_containerFragment_to_iconSliderFragment"
+            app:destination="@id/iconSliderFragment" />
     </fragment>
     <fragment
         android:id="@+id/caruselFragment"
@@ -30,4 +33,8 @@
         android:id="@+id/sliderFragment"
         android:name="com.example.materialviewsdemo.slider.SliderFragment"
         android:label="SliderFragment" />
+    <fragment
+        android:id="@+id/iconSliderFragment"
+        android:name="com.example.materialviewsdemo.slider.IconSliderFragment"
+        android:label="IconSliderFragment" />
 </navigation>

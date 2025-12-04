@@ -45,6 +45,12 @@ class ContainerFragment: Fragment() {
         }
 
 
+        binding.goToIconSliderButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_containerFragment_to_iconSliderFragment
+            )
+        }
+
     }
 
     override fun onDestroyView() {

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Slider с иконками"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Переключатель включения -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Включить все слайдеры:" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Слайдеры включены" />
+
+        <!-- 1. Слайдер с иконкой в НАЧАЛЕ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="1. Иконка в начале:" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderIconStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:value="8.0"
+            android:valueFrom="0.0"
+            android:valueTo="11.0"
+            app:thumbHeight="36dp"
+            app:trackHeight="24dp"
+            app:trackIconActiveColor="@color/teal_700"
+            app:trackIconActiveStart="@drawable/ic_fire_outline"
+            app:trackIconInactiveColor="@color/gray_400"
+            app:trackIconInactiveStart="@drawable/ic_snowflake_outline"
+            app:trackIconSize="18dp" />
+
+        <TextView
+            android:id="@+id/tvValue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Начало: 8.0" />
+
+        <!-- 2. Слайдер с иконкой в КОНЦЕ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="2. Иконка в конце:" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderIconEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:value="8.0"
+            android:valueFrom="0.0"
+            android:valueTo="11.0"
+            app:thumbHeight="36dp"
+            app:trackHeight="24dp"
+            app:trackIconActiveColor="@color/blue_500"
+            app:trackIconActiveEnd="@drawable/ic_snowflake"
+        app:trackIconInactiveColor="@color/gray_400"
+        app:trackIconInactiveEnd="@drawable/ic_fire"
+        app:trackIconSize="18dp"
+        app:trackStopIndicatorSize="0dp" />
+
+        <TextView
+            android:id="@+id/tvValue2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Конец: 8.0" />
+
+        <!-- 3. Слайдер с иконками с ОБЕИХ СТОРОН -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="3. Иконки с обеих сторон:" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderIconStartEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:value="8.0"
+            android:valueFrom="0.0"
+            android:valueTo="11.0"
+            app:thumbHeight="36dp"
+            app:trackHeight="24dp"
+            app:trackIconActiveColor="@color/green_500"
+            app:trackIconActiveStart="@drawable/ic_launcher_background"
+        app:trackIconActiveEnd="@drawable/ic_fire"
+        app:trackIconInactiveColor="@color/gray_400"
+        app:trackIconInactiveStart="@drawable/ic_snowflake_outline"
+        app:trackIconInactiveEnd="@drawable/ic_snowflake"
+        app:trackIconSize="18dp"
+        app:trackStopIndicatorSize="0dp" />
+
+        <TextView
+            android:id="@+id/tvValue3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Обе стороны: 8.0" />
+
+        <!-- 4. Кастомный слайдер с разными иконками -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="4. Кастомный (температура):" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderIconCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:value="20.0"
+            android:valueFrom="-10.0"
+            android:valueTo="40.0"
+            app:thumbHeight="40dp"
+            app:trackCornerSize="8dp"
+            app:trackHeight="28dp"
+            app:trackIconActiveColor="@android:color/holo_red_dark"
+            app:trackIconActiveEnd="@drawable/ic_fire"
+            app:trackIconActiveStart="@drawable/ic_snowflake"
+            app:trackIconInactiveColor="@android:color/darker_gray"
+            app:trackIconInactiveEnd="@drawable/ic_fire_outline"
+            app:trackIconInactiveStart="@drawable/ic_snowflake_outline"
+            app:trackIconSize="20dp"
+            app:trackStopIndicatorSize="0dp" />
+
+        <TextView
+            android:id="@+id/tvValue4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="Кастомный: 20.0°C" />
+
+        <!-- Разделитель -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Пояснения -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Атрибуты кастомизации:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="• trackIconActiveStart - активная иконка слева" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="• trackIconActiveEnd - активная иконка справа" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="• trackIconInactiveStart - неактивная иконка слева" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="• trackIconInactiveEnd - неактивная иконка справа" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="• trackIconSize - размер иконок" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="• trackIconActiveColor - цвет активных иконок" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="• trackIconInactiveColor - цвет неактивных иконок" />
+
+
+    </LinearLayout>
+
+</ScrollView>
