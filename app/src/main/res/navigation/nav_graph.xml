@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_containerFragment_to_cardsFragment"
             app:destination="@id/cardsFragment" />
+        <action
+            android:id="@+id/action_containerFragment_to_animViewsFragment"
+            app:destination="@id/animViewsFragment" />
     </fragment>
     <fragment
         android:id="@+id/caruselFragment"
@@ -23,4 +26,8 @@
         android:id="@+id/cardsFragment"
         android:name="com.example.materialviewsdemo.cards.CardsFragment"
         android:label="CardsFragment" />
+    <fragment
+        android:id="@+id/animViewsFragment"
+        android:name="com.example.materialviewsdemo.anim.AnimViewsFragment"
+        android:label="AnimViewsFragment" />
 </navigation>
