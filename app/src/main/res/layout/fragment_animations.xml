@@ -1,14 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="What"
-        android:src="@drawable/carusel_6" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <!-- Картинка 1 -->
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/carusel_6" />
 
-</LinearLayout>
+        <!-- Картинка 2 -->
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Картинка 3 -->
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Картинка 4 -->
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 4"
+            android:scaleType="centerInside"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Картинка 5 -->
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 5"
+            android:scaleType="fitXY"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Картинка 6 -->
+        <ImageView
+            android:id="@+id/image6"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Картинка 7 -->
+        <ImageView
+            android:id="@+id/image7"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Картинка 8 -->
+        <ImageView
+            android:id="@+id/image8"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 8"
+            android:scaleType="centerInside"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Картинка 9 -->
+        <ImageView
+            android:id="@+id/image9"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 9"
+            android:scaleType="fitCenter"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Картинка 10 -->
+        <ImageView
+            android:id="@+id/image10"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Image 10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/carusel_6" />
+
+        <!-- Добавим кнопки для управления -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnStartAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="Старт всех" />
+
+            <Button
+                android:id="@+id/btnStopAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Стоп всех" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
