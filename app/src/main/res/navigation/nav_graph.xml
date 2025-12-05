@@ -23,8 +23,8 @@
         <action
             android:id="@+id/action_containerFragment_to_animFragment"
             app:destination="@id/animFragment"
-            app:enterAnim="@anim/slide_in_right"
 
+            app:popExitAnim="@anim/slide_in_right"
 
             />
     </fragment>
