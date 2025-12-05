@@ -20,7 +20,15 @@
         <action
             android:id="@+id/action_containerFragment_to_iconSliderFragment"
             app:destination="@id/iconSliderFragment" />
+        <action
+            android:id="@+id/action_containerFragment_to_animFragment"
+            app:destination="@id/animFragment"
+
+            app:popExitAnim="@anim/slide_in_right"
+
+            />
     </fragment>
+
     <fragment
         android:id="@+id/caruselFragment"
         android:name="com.example.materialviewsdemo.carusel.CaruselFragment"
@@ -37,4 +45,8 @@
         android:id="@+id/iconSliderFragment"
         android:name="com.example.materialviewsdemo.slider.IconSliderFragment"
         android:label="IconSliderFragment" />
+    <fragment
+        android:id="@+id/animFragment"
+        android:name="com.example.materialviewsdemo.anim.AnimFragment"
+        android:label="AnimFragment" />
 </navigation>

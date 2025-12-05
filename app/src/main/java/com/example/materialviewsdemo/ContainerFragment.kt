@@ -51,6 +51,12 @@ class ContainerFragment: Fragment() {
             )
         }
 
+        binding.goToAnimButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_containerFragment_to_animFragment
+            )
+        }
+
     }
 
     override fun onDestroyView() {

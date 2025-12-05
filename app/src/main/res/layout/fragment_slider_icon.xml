@@ -22,6 +22,7 @@
 
         <!-- Переключатель включения -->
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -97,7 +98,7 @@
             app:thumbHeight="36dp"
             app:trackHeight="24dp"
             app:trackIconActiveColor="@color/blue_500"
-            app:trackIconActiveEnd="@drawable/ic_snowflake"
+
         app:trackIconInactiveColor="@color/gray_400"
         app:trackIconInactiveEnd="@drawable/ic_fire"
         app:trackIconSize="18dp"
@@ -132,7 +133,7 @@
         app:trackIconActiveEnd="@drawable/ic_fire"
         app:trackIconInactiveColor="@color/gray_400"
         app:trackIconInactiveStart="@drawable/ic_snowflake_outline"
-        app:trackIconInactiveEnd="@drawable/ic_snowflake"
+
         app:trackIconSize="18dp"
         app:trackStopIndicatorSize="0dp" />
 
@@ -163,7 +164,7 @@
             app:trackHeight="28dp"
             app:trackIconActiveColor="@android:color/holo_red_dark"
             app:trackIconActiveEnd="@drawable/ic_fire"
-            app:trackIconActiveStart="@drawable/ic_snowflake"
+
             app:trackIconInactiveColor="@android:color/darker_gray"
             app:trackIconInactiveEnd="@drawable/ic_fire_outline"
             app:trackIconInactiveStart="@drawable/ic_snowflake_outline"
