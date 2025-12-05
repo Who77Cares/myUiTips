@@ -32,9 +32,9 @@ class AnimFragment: Fragment() {
         binding.imageCat.animation = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_in)
         binding.imageCat.animate()
 
-        // ростое появаление картинки
-        binding.imageCat.animation = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_out)
-        binding.imageCat.animate()
+//        // ростое появаление картинки
+//        binding.imageCat.animation = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_out)
+//        binding.imageCat.animate()
 
     }
 

@@ -25,7 +25,6 @@
             app:destination="@id/animFragment"
             app:enterAnim="@anim/slide_in_right"
 
-            app:popEnterAnim="@anim/slide_in_left"
 
             />
     </fragment>
