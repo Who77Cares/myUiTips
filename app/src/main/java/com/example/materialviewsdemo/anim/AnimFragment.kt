@@ -37,4 +37,9 @@ class AnimFragment: Fragment() {
         binding.imageCat.animate()
 
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

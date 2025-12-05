@@ -22,8 +22,14 @@
             app:destination="@id/iconSliderFragment" />
         <action
             android:id="@+id/action_containerFragment_to_animFragment"
-            app:destination="@id/animFragment" />
+            app:destination="@id/animFragment"
+            app:enterAnim="@anim/slide_in_right"
+
+            app:popEnterAnim="@anim/slide_in_left"
+
+            />
     </fragment>
+
     <fragment
         android:id="@+id/caruselFragment"
         android:name="com.example.materialviewsdemo.carusel.CaruselFragment"
